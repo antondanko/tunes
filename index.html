@@ -110,11 +110,11 @@
 							<li class="radio-item">
 								<label>
 									<div class="radio-check">
-										<img class="radio-img" src="radio/RTLGroove.png" alt="обложка">
+										<img class="radio-img" src="./radio/kino.jpg" alt="обложка">
 									</div>
-									<input class="radio-btn" type="radio" id="RTLGroove" name="radioStantion"
-											data-radio-stantion="http://shoutcast.rtl.it:3040/">
-									<span class="radio-name">RTL Groove</span>
+									<input class="radio-btn" type="radio" id="kino" name="radioStantion"
+											data-radio-stantion="https://radio-stream-2.obozrevatel.com/viktor-tsoy-i-gruppa-kino128.mp3">
+									<span class="radio-name">Виктор Цой И Кино</span>
 								</label>
 							</li>
 
@@ -132,11 +132,11 @@
 							<li class="radio-item">
 								<label>
 									<div class="radio-check">
-										<img class="radio-img" src="radio/Record.jpg" alt="обложка">
+										<img class="radio-img" src="./radio/radioYe.png" alt="обложка">
 									</div>
-									<input class="radio-btn" type="radio" id="recordRus" name="radioStantion"
-											data-radio-stantion="http://air.radiorecord.ru:8102/rus_320">
-									<span class="radio-name">Record Rus</span>
+									<input class="radio-btn" type="radio" id="radioYe" name="radioStantion"
+											data-radio-stantion="http://eradio.cc.colocall.com:8000/eradio">
+									<span class="radio-name">Радіо Є</span>
 								</label>
 							</li>
 
@@ -154,11 +154,11 @@
 							<li class="radio-item">
 								<label>
 									<div class="radio-check">
-										<img class="radio-img" src="radio/dorojnoe.png" alt="обложка">
+										<img class="radio-img" src="./radio/promin.jpg" alt="обложка">
 									</div>
-									<input class="radio-btn" type="radio" id="roadRadio" name="radioStantion"
-											data-radio-stantion="http://dorognoe.hostingradio.ru:8000/dorognoe">
-									<span class="radio-name">Дорожное Радио</span>
+									<input class="radio-btn" type="radio" id="radioPromin" name="radioStantion"
+											data-radio-stantion="https://radio.nrcu.gov.ua:8443/ur2-mp3">
+									<span class="radio-name">Радіо Промінь</span>
 								</label>
 							</li>
 
@@ -179,6 +179,9 @@
 			</div>
 			<footer class="footer-fix radio-footer">
 				<button class="radio-stop fa fa-play"></button>
+				<span class="fa fa-volume-down radio-icon radio-volume-off"></span>
+				<input type="range" class="radio-volume" min="0" max="100" step="1" value="30">
+				<span class="fa fa-volume-up radio-icon radio-volume-on"></span>
 			</footer>
 		</article>
 	</main>
