@@ -40,14 +40,7 @@ export const radioPlayerInit = () => {
 		radioStop.disabled = false;
 		
 		audio.src = target.dataset.radioStantion;
-		const playPromise = audio.play();
-		if (playPromise !== undefined) {
-			playPromise.then(_ => {
-				audio.play();
-			})
-			.catch(error => console.log('error :>> ', error))
-		};
-		// play();
+		audio.play();
 		changeIdonPlay();
 	});
 
