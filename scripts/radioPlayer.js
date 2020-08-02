@@ -45,8 +45,8 @@ export const radioPlayerInit = () => {
 			playPromise.then(_ => {
 				audio.play();
 			})
-			.catch(error => console.log('error :>> ', error);)
-		});
+			.catch(error => console.log('error :>> ', error))
+		};
 		// play();
 		changeIdonPlay();
 	});
