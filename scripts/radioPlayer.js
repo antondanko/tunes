@@ -11,7 +11,7 @@ export const radioPlayerInit = () => {
 	const radioVolumeOn = document.querySelector('.radio-volume-on');
 
 	const audio = new Audio();
-	audio.type = 'audio/aac';
+	// audio.type = 'audio/aac';
 
 	radioStop.disabled = true;
 
