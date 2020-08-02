@@ -40,7 +40,8 @@ export const radioPlayerInit = () => {
 		radioStop.disabled = false;
 		
 		audio.src = target.dataset.radioStantion;
-		audio.play();
+		setTimeout(audio.play, 10000);
+		// audio.play();
 		changeIdonPlay();
 	});
 
