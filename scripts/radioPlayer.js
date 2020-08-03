@@ -44,8 +44,9 @@ export const radioPlayerInit = () => {
 			audio.play();
 			changeIdonPlay();
 			setTimeout(() => {
-				if (audio.duration === NaN) {
+				if (audio.duration != Infinity) {
 					window.location.href = audio.src;
+					console.log('audio.duration, audio.src :>> ', audio.duration, audio.src);
 				}
 			}, 3000);
 		} catch (err) {
