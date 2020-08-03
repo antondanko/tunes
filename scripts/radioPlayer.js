@@ -43,9 +43,12 @@ export const radioPlayerInit = () => {
 		try {
 			audio.play();
 			changeIdonPlay();
+			console.log('audio.src :>> ', audio.src);
+
 		} catch (err) {
 			window.location.href = audio.src;
 			console.error(err);
+			console.log('audio.src :>> ', audio.src);
 		}
 	});
 
