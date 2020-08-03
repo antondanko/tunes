@@ -50,12 +50,15 @@ export const radioPlayerInit = () => {
 			}, 6000);
 		}		
 
-		const stopTimeOut = () => clearTimeout(timeOut); 
+		const stopTimeOut = (timeOut) => {			
+		 clearTimeout(timeOut); 
+		 console.log('timeOut :>> ', timeOut);
+		}
 
 		try {
 			audio.play();
 			changeIdonPlay();
-			stopTimeOut();
+			stopTimeOut(timeOut);
 			onTimeOut();
 		} catch (err) {
 			window.location.href = audio.src;
