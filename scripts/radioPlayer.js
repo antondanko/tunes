@@ -40,26 +40,28 @@ export const radioPlayerInit = () => {
 		radioStop.disabled = false;
 		
 		audio.src = target.dataset.radioStantion;
-
-		var timeOut = 1;
+		
+		let timeoutID;
 		const onTimeOut = () => {
-			timeOut = setTimeout(() => {
+			timeoutID = setTimeout(() => {
 				if (audio.duration != Infinity) {
 					window.location.href = audio.src;
 				}
 			}, 6000);
-		}		
-		console.log('timeOut :>> ', timeOut);
+		}
 
-		const stopTimeOut = () => {			 
-		 console.log('timeOut :>> ', timeOut);
+		let stopTimeout = () => {
+			while (timeoutID--) {
+				clearTimeout(timeoutID);
+			}
 		}
 
 		try {
 			audio.play();
 			changeIdonPlay();
-			stopTimeOut();
+			stopTimeout();
 			onTimeOut();
+			console.log('onTimeOut() :>> ', onTimeOut());
 		} catch (err) {
 			window.location.href = audio.src;
 		}
