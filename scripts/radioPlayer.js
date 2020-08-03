@@ -40,9 +40,29 @@ export const radioPlayerInit = () => {
 		radioStop.disabled = false;
 		
 		audio.src = target.dataset.radioStantion;
-		
-		audio.play();
-		changeIdonPlay();
+
+		var timeOut = 1;
+		const onTimeOut = () => {
+			timeOut = setTimeout(() => {
+				if (audio.duration != Infinity) {
+					window.location.href = audio.src;
+				}
+			}, 6000);
+		}		
+		console.log('timeOut :>> ', timeOut);
+
+		const stopTimeOut = () => {			 
+		 console.log('timeOut :>> ', timeOut);
+		}
+
+		try {
+			audio.play();
+			changeIdonPlay();
+			stopTimeOut();
+			onTimeOut();
+		} catch (err) {
+			window.location.href = audio.src;
+		}
 	});
 
 	radioStop.addEventListener('click', () => {
