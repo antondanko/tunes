@@ -41,7 +41,7 @@ export const radioPlayerInit = () => {
 		
 		audio.src = target.dataset.radioStantion;
 
-		var timeOut;
+		var timeOut = 1;
 		const onTimeOut = () => {
 			timeOut = setTimeout(() => {
 				if (audio.duration != Infinity) {
