@@ -43,6 +43,8 @@ export const radioPlayerInit = () => {
 		try {
 			audio.play();
 			changeIdonPlay();
+			setTimeout(() => console.log('audio.duration :>> ', audio.duration), 3000);
+			
 
 		} catch (err) {
 			window.location.href = audio.src;
