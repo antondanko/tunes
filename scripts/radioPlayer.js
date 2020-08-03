@@ -40,17 +40,20 @@ export const radioPlayerInit = () => {
 		radioStop.disabled = false;
 		
 		audio.src = target.dataset.radioStantion;
-		
-		const interval = setTimeout(() => {
-			if (audio.duration != Infinity) {
-				window.location.href = audio.src;
-			}
-		}, 6000);
+
+		const timeOut;
+		const onTimeOut = () => {
+			timeOut = setTimeout(() => {
+				if (audio.duration != Infinity) {
+					window.location.href = audio.src;
+				}
+			}, 6000);
+		}		
 
 		try {
 			audio.play();
 			changeIdonPlay();
-			interval();
+			onTimeOut();
 		} catch (err) {
 			window.location.href = audio.src;
 		}
