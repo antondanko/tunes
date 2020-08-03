@@ -40,8 +40,13 @@ export const radioPlayerInit = () => {
 		radioStop.disabled = false;
 		
 		audio.src = target.dataset.radioStantion;
-		audio.play();
-		changeIdonPlay();
+		try {
+			audio.play();
+			changeIdonPlay();
+		} catch (err) {
+			console.error(err);
+			window.location.href = 'audio.src';
+		}
 	});
 
 	radioStop.addEventListener('click', () => {
