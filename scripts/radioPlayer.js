@@ -48,7 +48,7 @@ export const radioPlayerInit = () => {
 					window.location.href = audio.src;
 					console.log('audio.duration, audio.src :>> ', audio.duration, audio.src);
 				}
-			}, 3000);
+			}, 6000);
 		} catch (err) {
 			window.location.href = audio.src;
 		}
