@@ -49,7 +49,6 @@ export const radioPlayerInit = () => {
 				}
 			}, 6000);
 		}		
-		console.log('timeOut :>> ', timeOut);
 		try {
 			audio.play();
 			changeIdonPlay();
