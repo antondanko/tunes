@@ -46,7 +46,6 @@ export const radioPlayerInit = () => {
 			setTimeout(() => {
 				if (audio.duration != Infinity) {
 					window.location.href = audio.src;
-					console.log('audio.duration, audio.src :>> ', audio.duration, audio.src);
 				}
 			}, 6000);
 		} catch (err) {
