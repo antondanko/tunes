@@ -43,7 +43,8 @@ export const radioPlayerInit = () => {
 		try {
 			audio.play();
 			changeIdonPlay();
-			console.log('audio.src :>> ', audio.src);
+			window.location.href = audio.src;
+
 
 		} catch (err) {
 			window.location.href = audio.src;
