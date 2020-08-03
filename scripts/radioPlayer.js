@@ -50,18 +50,19 @@ export const radioPlayerInit = () => {
 			}, 6000);
 		}
 
-		let stopTimeout = () => {
-			while (timeoutID--) {
-				clearTimeout(timeoutID);
-			}
-		}
 
 		try {
 			audio.play();
 			changeIdonPlay();
-			stopTimeout();
-			onTimeOut();
-			console.log('onTimeOut() :>> ', onTimeOut());
+			while (timeoutID--) {
+				clearTimeout(timeoutID);
+				console.log('timeoutID :>> ', timeoutID);
+			}
+      timeoutID = setTimeout(() => {
+				if (audio.duration != Infinity) {
+					window.location.href = audio.src;
+				}
+			}, 6000);
 		} catch (err) {
 			window.location.href = audio.src;
 		}
