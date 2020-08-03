@@ -50,8 +50,7 @@ export const radioPlayerInit = () => {
 			}, 6000);
 		}		
 
-		const stopTimeOut = (timeOut) => {			
-		 clearTimeout(timeOut); 
+		const stopTimeOut = (timeOut) => {			 
 		 console.log('timeOut :>> ', timeOut);
 		}
 
