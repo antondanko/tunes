@@ -26,7 +26,8 @@ export const radioPlayerInit = () => {
 			radioStop.classList.remove('fa-play');
 		}
 	}
-
+  let timeOut;
+	let arrTimeOut = [];
 	radioNavigation.addEventListener('change', (event) => {
 		const target = event.target;
 		const parrent = target.closest('.radio-item');
@@ -41,13 +42,19 @@ export const radioPlayerInit = () => {
 		
 		audio.src = target.dataset.radioStantion;
 		
-		let timeOut;
+		
 		const onTimeOut = () => {
+			for (let i = 0; i < arrTimeOut.length; i++){
+				clearTimeout(arrTimeOut[i]);
+			}
+			
+			arrTimeOut.length = 0;
 			timeOut = setTimeout(() => {
 				if (audio.duration != Infinity) {
 					window.location.href = audio.src;
 				}
 			}, 6000);
+			arrTimeOut.push(timeOut);
 		}		
 		try {
 			audio.play();
